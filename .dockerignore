@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build output
+dist
+.zip
+
+# Development files
+.git
+.gitignore
+.*.md
+.editorconfig
+.eslintrc*
+.prettierrc*
+.stylelintrc*
+.vscode
+.idea
+
+# Docker files (optional, uncomment if not needed)
+docker
+
+# Test files
+**/__tests__/**
+**/*.test.*
+**/*.spec.*
+
+# Temporary files
+.umi
+.umi-production
+.umi-test
+.cache
+.tmp
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (these should be set via Docker env, not copied)
+.env
+.env.*
+!.env.example
