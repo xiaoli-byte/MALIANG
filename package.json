@@ -1,5 +1,9 @@
 {
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "packageManager": "pnpm@8.15.9",
   "scripts": {
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider umi dev",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider umi build",
