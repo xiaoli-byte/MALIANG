@@ -1,5 +1,5 @@
 # Stage 1: Build stage
-FROM node:18-alpine AS builder
+FROM node:18 AS builder
 
 WORKDIR /app
 
@@ -7,15 +7,14 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml* ./
 
 # Install dependencies
-RUN npm install -g pnpm@8 && \
-    pnpm install --frozen-lockfile
+RUN pnpm install
 
 # Copy source code
 COPY . .
 
 # Build with legacy OpenSSL provider for Node.js 17+
 ENV NODE_OPTIONS=--openssl-legacy-provider
-RUN pnpm build
+RUN npm build
 
 # Stage 2: Production stage with Nginx
 FROM nginx:alpine

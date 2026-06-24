@@ -17,9 +17,6 @@ dist
 .vscode
 .idea
 
-# Docker files (optional, uncomment if not needed)
-docker
-
 # Test files
 **/__tests__/**
 **/*.test.*

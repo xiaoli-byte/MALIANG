@@ -17,7 +17,7 @@ export default defineConfig({
   },
   webpack5: {},
   history: { type: 'hash' },
-  publicPath: '/bi/', 
+  // publicPath: '/bi/', 
   proxy: {
     '/aisos': {
       // 要代理的地址
